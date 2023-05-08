@@ -1,0 +1,41 @@
+/*링크박스 기본 모양*/
+div.container{
+    margin: 20% 20%;
+    display: grid; /*display: grid 사용*/
+    grid-template-columns: repeat(3, minmax(150px, 380px));
+    grid-template-rows: repeat(6, minmax(70px, 200px));
+    row-gap: 150px;
+    column-gap: 150px;
+    justify-content: space-around;
+    align-content: space-around;
+  }
+div > a > div{
+    font-size: 1.4em;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+/*각 분과 박스 커서 올렸을때 효과 추가*/
+div > div{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    opacity: 1;
+    transition: opacity 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div > div:hover{
+    opacity:0;
+}
+a > div{
+    position: relative;
+    background-size: 500px 350px;
+    background-position: center center;
+}
